@@ -90,6 +90,15 @@ class Factory {
                 qu.push(type);
                 q.pop();
             }
+            else if(str == "**") {
+                p1 = qu.front();
+                qu.pop();
+                p2 = qu.front();
+                qu.pop();
+                type = new Pow(p1, p2);
+                qu.push(type);
+                q.pop();
+            }
             else {
                 p3 = stod(str);
                 type = new Op(p3);
